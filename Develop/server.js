@@ -35,7 +35,7 @@ app.get('/api/notes', (req, res) => {
 });
 
 
-// DELETE request to delete a note
+// DELETE request for a note
 app.delete('/api/notes/:term', (req, res) => {
     const requestedNote = req.params.term;
     console.log("requestedNote: " + requestedNote);
