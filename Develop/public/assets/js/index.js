@@ -135,7 +135,7 @@ const renderNoteList = async (notes) => {
 
     const spanEl = document.createElement('span');
     spanEl.classList.add('list-item-title');
-    spanEl.id = myNote.note_id;
+    spanEl.id = myNote.id;
     if (myNote === 'No saved Notes') {
       spanEl.innerText = myNote
     } else {

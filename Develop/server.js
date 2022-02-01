@@ -34,6 +34,39 @@ app.get('/api/notes', (req, res) => {
     });
 });
 
+
+// DELETE request to delete a note
+app.delete('/api/notes/:term', (req, res) => {
+    const requestedNote = req.params.term;
+    console.log("requestedNote: " + requestedNote);
+    // Obtain existing notes
+    fs.readFile('./db/db.json', 'utf8', (err, data) => {
+        if (err) {
+            console.error(err);
+        } else {
+            // Convert string into JSON object
+            const parsedNotes = JSON.parse(data);
+            // delete note
+            const i = parsedNotes.findIndex(note => {
+                return note.id === requestedNote;
+            })
+            parsedNotes.splice(i, 1);
+            // Write updated notes back to the file
+            fs.writeFile(
+                './db/db.json',
+                JSON.stringify(parsedNotes, null, 4),
+                (writeErr) =>
+                    writeErr
+                        ? console.error(writeErr)
+                        : console.info('Successfully updated notes!')
+            );
+            res.status(201).json("all good");
+        }
+    });
+});
+
+
+
 // POST request to add a note
 app.post('/api/notes', (req, res) => {
     // Log that a POST notes was received
