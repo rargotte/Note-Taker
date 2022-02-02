@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-// Helper method for generating unique ids
+// Helper method for generating unique id's
 const uuid = require('./helpers/uuid');
 const dbData = require('./db/db.json');
 const { parse } = require('path');
