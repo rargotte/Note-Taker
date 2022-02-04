@@ -19,7 +19,7 @@ This application creates an HTML page with the profile of the Team included via 
   
   This application uses an Express.js back end and saves and retrieves note data from a JSON file.
 
-  You can execute this application online at: 
+  You can execute this application online at: https://immense-spire-49858.herokuapp.com/
 
   # Usage
   This application is oriented for small business owners who want to be able to write and save notes so they can organize and keep track of tasks.
@@ -38,6 +38,7 @@ This application creates an HTML page with the profile of the Team included via 
   
   # Demo Video
 
+https://user-images.githubusercontent.com/93161922/152469260-4b9a03e0-a7d7-4804-9da2-eb71ccf3262c.mp4
 
 
 
