@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 // Helper method for generating unique id's
 const uuid = require('./helpers/uuid');
-const dbData = require('./db/db.json');
+const dbData = require('./Develop/db/db.json');
 const { parse } = require('path');
 const app = express();
 const PORT = process.env.PORT || 3001;
